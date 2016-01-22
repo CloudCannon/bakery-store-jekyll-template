@@ -61,7 +61,7 @@ footer {
 
 section.hero {
   color: #fff;
-  background-image: url('https://static.pexels.com/photos/2436/bread-food-healthy-breakfast-large.jpg');
+  background-image: url('/images/bg.jpg');
   background-size: cover;
 }
 
