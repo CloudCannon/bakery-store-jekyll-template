@@ -182,6 +182,18 @@ p.sub-text {
   border-radius: 100px;
 }
 
+.container.page {
+  padding: 80px 0;
+}
+
+.cookie img {
+  width: 77px;
+  border-radius: 68px;
+  position: relative;
+  left: -18px;
+  top: 15px;
+}
+
 hr {
   border: 1px solid #eee;
   margin: 60px 0;
