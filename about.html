@@ -1,0 +1,29 @@
+---
+hello_text: "Hello there!"
+show_footer: false
+fruit:
+  - apple
+  - banana
+  - orange
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>About</title>
+	</head>
+	<body>
+		<h1>About page</h1>
+		<p>{{ page.hello_text }}</p>
+		
+		{% if page.show_footer %}
+			<footer>I am a footer</footer>
+		{% endif %}
+
+		<ul>
+			{% for item in page.fruit %}
+				<li>{{ item }}</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
