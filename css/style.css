@@ -188,12 +188,13 @@ hr {
 }
 
 textarea,
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
 	width: 100%;
 	padding: 10px;
 	font-size: 18px;
 	display: block;
-	box-sizing: padding-box;
+	box-sizing: border-box;
 }
 
 textarea {
@@ -211,4 +212,21 @@ label {
 input[type="submit"] {
 	margin: 30px 0 0 0;
 	font-size: 20px;
+}
+
+.newsletter form {
+	padding: 30px;
+	border: 1px solid #ccc;
+}
+
+.newsletter label {
+	margin: 0;
+}
+
+.newsletter input[type="submit"] {
+	display: block;
+}
+
+.youtube {
+	text-align: center;
 }
