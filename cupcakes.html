@@ -1,0 +1,29 @@
+---
+layout: page
+title: Muffins
+---
+<h1>Our cupcakes</h1>
+
+<div class="cupcakes">
+	{% for cupcake in site.cupcakes %}
+		<div class="cupcake">
+			<div class="image"><img src="{{ cupcake.image_path }}" alt="{{ cupcake.type }}" /></div>
+			<h2>{{ cupcake.type }}</h2>
+			<p class="rating">
+				{% case cupcake.rating %}
+					{% when 1 %}
+						<img src="/images/rating/sick.png"/>
+					{% when 2 %}
+						<img src="/images/rating/unhappy.png"/>
+					{% when 3 %}
+						<img src="/images/rating/ok.png"/>
+					{% when 4 %}
+						<img src="/images/rating/happy.png"/>
+					{% when 5 %}
+						<img src="/images/rating/super_happy.png"/>
+				{% endcase %}
+			</p>
+			<p>{{ cupcake.description }}</p>
+		</div>
+	{% endfor %}
+</div>
