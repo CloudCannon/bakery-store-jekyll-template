@@ -1,29 +1,32 @@
 ---
 layout: page
 title: Muffins
+flavours: []
 ---
 <h1>Our cupcakes</h1>
 
 <div class="cupcakes">
-	{% for cupcake in site.cupcakes %}
+	{% for cupcake in site.cupcakes reversed limit: 3 offset: 3 %}
 		<div class="cupcake">
-			<div class="image"><img src="{{ cupcake.image_path }}" alt="{{ cupcake.type }}" /></div>
-			<h2>{{ cupcake.type }}</h2>
-			<p class="rating">
-				{% case cupcake.rating %}
-					{% when 1 %}
-						<img src="/images/rating/sick.png"/>
-					{% when 2 %}
-						<img src="/images/rating/unhappy.png"/>
-					{% when 3 %}
-						<img src="/images/rating/ok.png"/>
-					{% when 4 %}
-						<img src="/images/rating/happy.png"/>
-					{% when 5 %}
-						<img src="/images/rating/super_happy.png"/>
-				{% endcase %}
-			</p>
+			<div class="image">
+				<img src="{{ cupcake.image_path }}" alt="{{ cupcake.type }}"
+					style="-webkit-filter: {% cycle "grayscale", "sepia", "invert" %}(100%)"
+				/>
+			</div>
+			<h2
+				{% if forloop.rindex <= 3 %}
+					style="background: black; color: white;"
+				{% endif %}
+
+				title="{{ forloop.length}} cupcakes"
+			>{{ forloop.index0}}. {{ cupcake.type }}</h2>
 			<p>{{ cupcake.description }}</p>
 		</div>
+	{% endfor %}
+
+	{% for flavour in page.flavours %}
+		{{ flavour }}
+	{% else %}
+		<p>There are no flavours</p>
 	{% endfor %}
 </div>
