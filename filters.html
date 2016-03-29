@@ -1,0 +1,128 @@
+---
+layout: default
+title: Home
+---
+
+<div class="container">
+	<table class="filter-table">
+		<tr>
+			<th>Filter</th>
+			<th>Output</th>
+		</tr>
+		<tr>
+			<td><code>{% raw %}{{ "cupcake" | prepend: "chocolate " }}{% endraw %}</code></td>
+			<td>{{ "cupcake" | prepend: "chocolate " }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "lemon" | append: " cake" }}{% endraw %}</code></td>
+			<td>{{ "lemon" | append: " cake" }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "i like cupcakes" | capitalize }}{% endraw %}</code></td>
+			<td>{{ "i like cupcakes" | capitalize }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "BakeryStore" | downcase }}{% endraw %}</code></td>
+			<td>{{ "BakeryStore" | downcase }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "apple pie" | upcase }}{% endraw %}</code></td>
+			<td>{{ "apple pie" | upcase }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "muffin&amp;cupcake?" | cgi_escape }}{% endraw %}</code></td>
+			<td>{{ "muffin&cupcake?" | cgi_escape }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "&lt;h1&gt;Banana Split&lt;/h1&gt;" | escape }}{% endraw %}</code></td>
+			<td>{{ "<h1>Banana Split</h1>" | escape }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "blueberry muffin.html" | slugify }}{% endraw %}</code></td>
+			<td>{{ "blueberry muffin.html" | slugify }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "&lt;h1&gt;Greentea cheesecake&lt;/h1&gt;" | strip_html }}{% endraw %}</code></td>
+			<td>{{ "<h1>Greentea cheesecake</h1>" | strip_html }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "**Sour dough** bread" | markdownify }}{% endraw %}</code></td>
+			<td>{{ "**Sour dough** bread" | markdownify }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "I really really like cupcakes" | remove_first: 'really' }}{% endraw %}</code></td>
+			<td>{{ "I really really like cupcakes" | remove_first: "really" }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "I really really like cupcakes" | remove: 'really' }}{% endraw %}</code></td>
+			<td>{{ "I really really like cupcakes" | remove: "really" }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "I really really like cupcakes" | replace_first: "really", "truly" }}{% endraw %}</code></td>
+			<td>{{ "I really really like cupcakes" | replace_first: "really", "truly" }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "I really really like cupcakes" | replace: "really", "truly" }}{% endraw %}</code></td>
+			<td>{{ "I really really like cupcakes" | replace: "really", "truly" }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "Carrot cake" | size }}{% endraw %}</code></td>
+			<td>{{ "Carrot cake" | size }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "Peanut butter cheesecake" | number_of_words }}{% endraw %}</code></td>
+			<td>{{ "Peanut butter cheesecake" | number_of_words }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "Souffle" | slice: 0 }}{% endraw %}</code></td>
+			<td>{{ "Souffle" | slice: 0 }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "Souffle" | slice: 1 }}{% endraw %}</code></td>
+			<td>{{ "Souffle" | slice: 1 }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "Souffle" | slice: -2 }}{% endraw %}</code></td>
+			<td>{{ "Souffle" | slice: -2 }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "Souffle" | slice: 2,4 }}{% endraw %}</code></td>
+			<td>{{ "Souffle" | slice: 2,4 }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "apple,banana,carrot" | split:"," | jsonify }}{% endraw %}</code></td>
+			<td>{{ "apple,banana,carrot" | split:"," | jsonify }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "The freshest bread in San Francisco" | truncate: 15 }}{% endraw %}</code></td>
+			<td>{{ "The freshest bread in San Francisco" | truncate: 15 }}</td>
+		</tr>
+
+		<tr>
+			<td><code>{% raw %}{{ "Who ate all the cupcakes?" | truncatewords: 3 }}{% endraw %}</code></td>
+			<td>{{ "Who ate all the cupcakes?" | truncatewords: 3 }}</td>
+		</tr>
+
+	</table>
+</div>
