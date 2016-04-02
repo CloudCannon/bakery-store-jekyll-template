@@ -1,0 +1,12 @@
+{
+	"mike": {
+		"full_name": "Mike Neumegen",
+		"image_path": "/images/mike.jpg",
+		"twitter_handle": "mikeneumegen"
+	},
+	"george": {
+		"full_name": "George Phillips",
+		"image_path": "/images/george.jpg",
+		"twitter_handle": "gphillips_nz"
+	}
+}
