@@ -1,3 +1,6 @@
 collections:
   cookies:
     output: true
+    permalink: /baked-goods/:path/
+
+permalink: /:day/:month/:year/:title/
