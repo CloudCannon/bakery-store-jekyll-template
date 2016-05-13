@@ -98,6 +98,10 @@ nav.main-nav li a {
 	padding: 10px;
 }
 
+a.active {
+	color: #FFE000;
+}
+
 div.content {
 	background: #fff;
 }
