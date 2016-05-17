@@ -1,0 +1,33 @@
+---
+layout: default
+images:
+  - image_path: /images/cakes/apple-pie.jpg
+    title: Apple Pie
+  - image_path: /images/cakes/birthday-cake.jpg
+    title: Birthday Cake
+  - image_path: /images/cakes/black-forest.jpg
+    title: Black Forest
+  - image_path: /images/cakes/brownie.jpg
+    title: Brownie
+  - image_path: /images/cakes/cheese-cake.jpg
+    title: Cheese Cake
+  - image_path: /images/cakes/chocolate-cake.jpg
+    title: Chocolate Cake
+  - image_path: /images/cakes/fruit-cake.jpg
+    title: Fruit Cake
+  - image_path: /images/cakes/lamington.jpg
+    title: Lamington
+  - image_path: /images/cakes/lemon-cake.jpg
+    title: Lemon Cake
+    link: /lemon-cake.html
+---
+
+<ul class="photo-gallery">
+  {% for image in page.images %}
+    <li>
+      <a href="{{ image.link }}">
+        <img src="{{ image.image_path }}" alt="{{ image.title}}"/>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
