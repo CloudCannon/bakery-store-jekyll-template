@@ -2,7 +2,37 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>{{ page.title }}</title>
+		<title>
+			{% if page.title %}
+				{{ page.title }}
+			{% else %}
+				Bakery Store
+			{% endif %}
+		</title>
+		{% if page.description %}
+			<meta name="description" content="{{ page.description}}" />
+		{% endif %}
+
+		<meta property="og:site_name" content="Bakery Store">
+		<meta property="og:url" content="{{ page.url | prepend: site.url }}">
+		<meta property="og:title" content="{{ page.title }}">
+		<meta property="og:description" content="{{ page.description }}">
+		{% if page.post_image %}
+		  <meta property="og:image" content="{{ page.post_image | prepend: site.url }}">
+		{% endif %}
+
+		{% if page.post_image and page.post_image_width %}
+		  <meta property="og:image:width" content="{{ page.post_image_width }}">
+		{% endif %}
+		{% if page.post_image and page.post_image_height %}
+		  <meta property="og:image:height" content="{{ page.post_image_height }}">
+		{% endif %}
+		{% if page.post_image and page.post_image_type %}
+		  <meta property="og:image:type" content="{{ page.post_image_type }}">
+		{% endif %}
+
+		<meta name="twitter:image" content="{{ page.post_image | prepend: site.url }}">
+
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
 	</head>
