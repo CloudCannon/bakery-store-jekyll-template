@@ -10,7 +10,7 @@ layout: default
 			{% if words < 360 %}
 				1 min
 			{% else %}
-				{{ words | divided_by:180 }} mins
+				{{ words | divided_by: 180 }} mins
 			{% endif %} read
 			<span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
 		</p>
