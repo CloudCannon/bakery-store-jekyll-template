@@ -1,0 +1,25 @@
+---
+layout: page
+title: Date Formatting
+date: 2016-03-23T10:20:00Z
+---
+
+<ul>
+  <li>{{ page.date }}</li>
+  <li>{{ page.date | date_to_long_string }}</li>
+  <li>{{ page.date | date_to_rfc822 }}</li>
+  <li>{{ page.date | date_to_string }}</li>
+  <li>{{ page.date | date_to_xmlschema }}</li>
+  <li>{{ page.date | date: "%m/%d/%Y" }}</li>
+  <li>{{ page.date | date: "%-d %B %Y" }}</li>
+  <li>
+    {% assign day = page.date | date: "%-d" %}
+    {% case day %}
+      {% when '1' or '21' or '31' %}{{ day }}st
+      {% when '2' or '22' %}{{ day }}nd
+      {% when '3' or '23' %}{{ day }}rd
+      {% else %}{{ day }}th
+    {% endcase %}
+    {{ page.date | date: "of %B, %Y" }}
+  </li>
+</ul>
